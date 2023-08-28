@@ -2,7 +2,7 @@ import React from "react";
 
 const HomeCard = ({ name, price, category, image, loading }) => {
   return (
-    // 20579325 application number
+    // 20579325 application
     <div className="bg-white shadow-md p-2 rounded min-w-[150px]">
       {name ? (
         <>
