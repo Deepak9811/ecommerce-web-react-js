@@ -37,6 +37,7 @@ const Header = () => {
             <Link to={"/"}>Home</Link>
             <Link to={"menu"}>Menu</Link>
             <Link to={"about"}>About</Link>
+            <Link to={"task"}>Task</Link>
             <Link to={"contact"}>Contact</Link>
           </nav>
           <div className="text-2xl text-slate-600 relative">

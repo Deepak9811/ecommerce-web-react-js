@@ -12,6 +12,7 @@ dotenv.config();
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var productRouter = require("./routes/product");
+var myTask = require("./routes/myTask");
 
 var app = express();
 
@@ -29,6 +30,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/product", productRouter);
+app.use("/mytask", myTask);
 
 // Mongo Connection
 // console.log("mongo connect :-> ", process.env.MONGODB_URL);

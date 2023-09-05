@@ -15,6 +15,7 @@ import Login from "./page/Login";
 import Menu from "./page/Menu";
 import NewProduct from "./page/NewProduct";
 import Signup from "./page/Signup";
+import Task from "./page/Task";
 import reportWebVitals from "./reportWebVitals";
 
 import { store } from "./redux";
@@ -22,10 +23,16 @@ import { store } from "./redux";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 
+import Index from "./page/myTask/Index";
+import ShowTask from "./page/myTask/ShowTask";
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
+      {/* <Route index element={<Index />} /> */}
+      {/* <Route path="mytask" element={<ShowTask />} /> */}
       <Route index element={<Home />} />
+      <Route path="task" element={<Task />} />
       <Route path="menu" element={<Menu />} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
@@ -38,15 +45,15 @@ const router = createBrowserRouter(
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  // <Provider store={store}>
-  //   <RouterProvider router={router} />
-  // </Provider>
+  <Provider store={store}>
+    <RouterProvider router={router} />
+  </Provider>
 
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
+  // <React.StrictMode>
+  //   <BrowserRouter>
+  //     <App />
+  //   </BrowserRouter>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
